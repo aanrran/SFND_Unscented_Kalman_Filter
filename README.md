@@ -1,5 +1,5 @@
 # Unscented Kalman Filter Project
-Self-Driving Car Engineer Nanodegree Program
+Sensor Fusion Nanodegree Program
 
 <img src="media/ukf_highway_tracked.gif" width="700" height="400" />
 
