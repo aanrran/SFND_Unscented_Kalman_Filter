@@ -1,7 +1,7 @@
 # Unscented Kalman Filter Project
 Sensor Fusion Nanodegree Program
 
-<img src="media/ukf_highway_tracked.gif" width="700" height="300" />
+<img src="media/ukf_highway_animation.gif" width="700" height="300" />
 
 In this project, I utilized an Unscented Kalman Filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. I passed the project requires and obtained RMSE values that are lower that the tolerance threshold. 
 
