@@ -9,7 +9,7 @@ In this project, I utilized an Unscented Kalman Filter to estimate the state of 
 
 ## The filter Design
 
-The below flow chart shows my code structure. the data is checked and fused into an unscented Kalman filter, and the Kalman filter will output the best estimating to the second order accuracy of the nonlinear model.
+The below flow chart shows my code structure. the data is checked and fused into an unscented Kalman filter, and the Kalman filter will output the best estimation to the second order of the nonlinear model.
 
 <img src="media/the process diagram.png" width="1000" height="550" />
 
