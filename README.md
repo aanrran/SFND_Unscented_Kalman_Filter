@@ -3,32 +3,13 @@ Sensor Fusion Nanodegree Program
 
 <img src="media/ukf_highway_animation.gif" width="700" height="300" />
 
-In this project, I utilized an Unscented Kalman Filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. I passed the project requires and obtained RMSE values that are lower that the tolerance threshold. 
-
-The main program can be built and ran by doing the following from the project top directory.
-
-1. mkdir build
-2. cd build
-3. cmake ..
-4. make
-5. ./ukf_highway
-
-The programs that need to be written to accomplish the project are src/ukf.cpp, and src/ukf.h
-
-<img src="media/ukf_highway Image.png" width="700" height="300" />
-
-`main.cpp` is using `highway.h` to create a straight 3 lane highway environment with 3 traffic cars and the main ego car at the center. 
-The viewer scene is centered around the ego car and the coordinate system is relative to the ego car as well. The ego car is green while the 
-other traffic cars are blue. The traffic cars will be accelerating and altering their steering to change lanes. Each of the traffic car's has
-it's own UKF object generated for it, and will update each indidual one during every time step. 
-
-The red spheres above cars represent the (x,y) lidar detection and the purple lines show the radar measurements with the velocity magnitude along the detected angle. The Z axis is not taken into account for tracking, so you are only tracking along the X/Y axis.
+In this project, I utilized an Unscented Kalman Filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. I passed the project requires and obtained RMSE values that are far lower that the tolerance threshold. The environment is a straight 3 lane highway with 3 traffic cars and the main ego car at the center. The viewer scene is centered around the ego car and the coordinate system is relative to the ego car as well. The ego car is green while the other traffic cars are blue. The traffic cars will be accelerating and altering their steering to change lanes. Each of the traffic car's has it's own UKF object generated for it, and will update each individual one during every time step. The red spheres above cars represent the (x,y) lidar detection and the purple lines show the radar measurements with the velocity magnitude along the detected angle. The Z axis is not taken into account for tracking, so we are only tracking along the X/Y axis.
 
 ---
 
 ## The filter Design
 
-The flow diagram is show below, the data is checked and fused into a unscented Kalman filter, and the Kalman filter will output the best estimating to the second order accuracy of the nonlinear model.
+The below flow chart shows my code structure. the data is checked and fused into an unscented Kalman filter, and the Kalman filter will output the best estimating to the second order accuracy of the nonlinear model.
 
 <img src="media/process diagram.png" width="1000" height="550" />
 
@@ -59,4 +40,4 @@ The flow diagram is show below, the data is checked and fused into a unscented K
 ## References
 
 1. [Eigen - Quick Reference Guide](https://eigen.tuxfamily.org/dox/group__QuickRefPage.html)
-2. Udacity Kalman Filter Cheat Sheet
+2. Udacity Unscented Kalman Filter
