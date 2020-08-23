@@ -13,7 +13,7 @@ The main program can be built and ran by doing the following from the project to
 4. make
 5. ./ukf_highway
 
-Note that the programs that need to be written to accomplish the project are src/ukf.cpp, and src/ukf.h
+The programs that need to be written to accomplish the project are src/ukf.cpp, and src/ukf.h
 
 <img src="media/ukf_highway Image.png" width="700" height="300" />
 
@@ -23,6 +23,14 @@ other traffic cars are blue. The traffic cars will be accelerating and altering 
 it's own UKF object generated for it, and will update each indidual one during every time step. 
 
 The red spheres above cars represent the (x,y) lidar detection and the purple lines show the radar measurements with the velocity magnitude along the detected angle. The Z axis is not taken into account for tracking, so you are only tracking along the X/Y axis.
+
+---
+
+## The filter Design
+
+The flow diagram is show below, the data is checked and fused into a unscented Kalman filter, and the Kalman filter will output the best estimating to the second order accuracy of the nonlinear model.
+
+<img src="media/process diagram.png" width="1000" height="550" />
 
 ---
 
